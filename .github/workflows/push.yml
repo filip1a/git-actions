@@ -1,0 +1,14 @@
+name: push
+on: [push]
+jobs:
+  push-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy files
+        uses: actions/checkout@v3
+      - name: Lint script
+        run: npm lint
+      - name: Test script
+        run: npm test
+      - name: Build script
+        run: npm build
