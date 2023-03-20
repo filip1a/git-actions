@@ -1,7 +1,8 @@
 name: issue
-on: issues
-  types:
-  - opened
+on: 
+  issues:
+    types:
+      - opened
 jobs:
   issue-workflow:
     runs-on: ubuntu-latest
